@@ -132,6 +132,13 @@ extern crate tokio_threadpool;
 #[macro_use]
 extern crate vlog;
 
+extern crate cranelift;
+extern crate cranelift_frontend;
+extern crate cranelift_entity;
+extern crate cranelift_codegen;
+extern crate cranelift_module;
+extern crate cranelift_native;
+
 #[macro_use]
 pub mod util;
 pub mod config;

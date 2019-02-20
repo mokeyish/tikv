@@ -118,6 +118,17 @@ tipb = { git = "https://github.com/pingcap/tipb.git" }
 kvproto = { git = "https://github.com/pingcap/kvproto.git" }
 log_wrappers = { path = "components/log_wrappers" }
 
+cranelift-codegen = { version = "0.28.0" }
+cranelift-module = { version = "0.28.0" }
+cranelift-native = { version = "0.28.0" }
+cranelift = { version = "0.28.0" }
+cranelift-frontend = { version = "0.28.0" }
+cranelift-entity = { version = "0.28.0" }
+
+region = "2.0.0"
+errno = "0.2.4"
+target-lexicon = { version = "0.2.0" }
+
 [dependencies.murmur3]
 git = "https://github.com/pingcap/murmur3.git"
 
@@ -147,6 +158,9 @@ signal = "0.6"
 
 [target.'cfg(target_os = "linux")'.dependencies]
 procinfo = { git = "https://github.com/tikv/procinfo-rs" }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3", features = ["winbase", "memoryapi"] }
 
 [workspace]
 members = [
